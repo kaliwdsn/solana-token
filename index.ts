@@ -23,7 +23,7 @@ async function airdrop() {
   try {
     const airdropSignature = await connection.requestAirdrop(
       // payer.publicKey,
-      new PublicKey("HxJHFKt8nFxmXL8HVnD84YJFrsZmHC1ux9fgwm2awkS8"),
+      new PublicKey("6ciq34LobTP9LUQAsaJcFYhjgayZvbwCr2NuPRV9zL7x"),
 
 
       2 * LAMPORTS_PER_SOL,
@@ -120,14 +120,14 @@ async function create() {
 }
 //https://explorer.solana.com/
 //airdrop()
-// airdrop().catch((error) => {
-//   console.error(error);
-//   process.exitCode = 1;
-// });
-
-
-// create()
-create().catch((error) => {
+airdrop().catch((error) => {
   console.error(error);
   process.exitCode = 1;
 });
+
+
+// create()
+// create().catch((error) => {
+//   console.error(error);
+//   process.exitCode = 1;
+// });
